@@ -1,0 +1,14 @@
+<routes>
+    <!-- Vehicle types -->
+    <vType id="car" accel="1.0" decel="4.5" maxSpeed="13.9" length="5"/>
+    <vType id="bus" vClass="bus" color="1,0,0" accel="0.8" decel="3.0" length="12" minGap="3" maxSpeed="11"/>
+
+    <!-- Route (north to south) -->
+    <route id="r1" edges="E1 E2"/>
+
+    <!-- Continuous flow of cars -->
+    <flow id="flow_n2s" type="car" route="r1" begin="0" end="600" vehsPerHour="600"/>
+
+    <!-- A single bus on same route -->
+    <vehicle id="bus_1" type="bus" route="r1" depart="30"/>
+</routes>
